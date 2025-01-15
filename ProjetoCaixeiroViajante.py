@@ -130,10 +130,7 @@ def algoritmo_genetico():
 
     return melhor_solucao, melhor_aptidao, progresso_aptidao, bateria_total
 
-# Classe responsável por verificar a bateria, esta classe sempre verificará o 
-#  total da bateria levando em conta o custo para chegar a próxima cidade, desta
-#  forma, caso a bateria não for suficiente para a cidade seguinte da próxima será,
-#  comparado os custos e abastecido onde for mais em conta
+# Classe responsável por verificar a bateria
 def verifica_bateria(bateria_total,i,cidade_custo):
     if(bateria_total <= 5):
         if(analisar_custo(cidade_custo,i)):
@@ -198,11 +195,3 @@ plotar_progresso(progresso_aptidao)
 # Plotar a rota percorrida em meio a gráficos
 plotar_progresso_caixeiro(melhor_rota)
         
-# Implementar:
-#   A bateria diminui conforme o peso das "cidades" pelas quais o caixeiro viajou
-#   Adicionar preço referente ao custo da unidade da bateria por cidade
-#       Neste caso avaliar se é menos custoso abastecer na cidade atual ou na próxima
-#        se eventualmente a bateria atual for suficiente para apenas viajar a próxima cidade
-#        esta implementação funcionará desta forma, a cada cidade será analisado o nível da beteria,
-#        caso o total for até 5 unidades a menos que a próxima viagem, será analisado os custos de
-#        combustível entre a cidade atual e a próxima. Abastecer onde for mais em conta!
